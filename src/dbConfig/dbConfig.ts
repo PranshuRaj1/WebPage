@@ -1,4 +1,3 @@
-import { log } from "console";
 import mongoose from "mongoose";
 
 export async function connect() {
@@ -10,9 +9,9 @@ export async function connect() {
       console.log("Connected");
     });
 
-    connection.on("error", (error) => {
+    connection.on("error", (err) => {
       console.log("Error");
-      console.log(error);
+      console.log(err);
       process.exit();
     });
   } catch (error) {
